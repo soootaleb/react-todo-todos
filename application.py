@@ -25,9 +25,12 @@ def todo():
     if message == 'ADD_CLIENT':
         user_id = message['data']['id']
         database[user_id] = [] # Empty list for a given ID
+        print('Added client {}'.format(user_id))
     elif message == 'ADD_TODO':
         user_id = message['data']['id']
-        database[user_id].append(message['data']['label']) # Add todo for a given id
+        label = message['data']['label']
+        database[user_id].append(label) # Add todo for a given id
+        print('Added todo "{}" for client {}'.format(user_id, label))
 
     return True
 
