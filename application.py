@@ -33,7 +33,7 @@ def todo():
         database[user_id].append(label) # Add todo for a given id
         print('Added todo "{}" for client {}'.format(user_id, label))
 
-    return True
+    return 'OK'
 
 if __name__ == "__main__":
     application.debug = True
