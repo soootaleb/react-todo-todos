@@ -17,6 +17,7 @@ database = {}
 #     }
 # }
 
+@application.route('/', methods=['POST'])
 def todo():
     data = json.loads(request.data.decode())
     message = data['message']
@@ -29,8 +30,6 @@ def todo():
         database[user_id].append(message['data']['label']) # Add todo for a given id
 
     return True
-
-application.add_url_rule('/', 'index', todo())
 
 if __name__ == "__main__":
     application.debug = True
