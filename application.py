@@ -20,6 +20,7 @@ database = {}
 @application.route('/', methods=['POST'])
 def todo():
     body = json.loads(request.data.decode())
+    print(body)
     message = body['message']
     data = body['data']
 
