@@ -32,7 +32,7 @@ def todo():
         user_id = data['id']
         label = data['label']
         database[user_id].append(label) # Add todo for a given id
-        print('Added todo "{}" for client {}'.format(user_id, label))
+        print('Added todo "{}" for client {}'.format(label, user_id))
 
     return 'OK'
 
